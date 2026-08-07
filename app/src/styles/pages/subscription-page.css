@@ -1,0 +1,138 @@
+/* General styles */
+.subscription-page {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  padding: 40px;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    #141e30,
+    #243b55
+  ); /* Subtle gradient background */
+  color: #ffffff; /* General text color */
+}
+
+.subscription-header {
+  margin-bottom: 40px;
+}
+
+.subscription-header h1 {
+  font-size: 3em;
+  color: #f0f8ff; /* Light header color */
+}
+
+.subscription-header p {
+  font-size: 1.4em;
+  color: #cccccc; /* Subtle text for the description */
+}
+
+/* Plans container */
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+/* Plan card styles */
+.plan-card {
+  border: 2px solid #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  width: 350px; /* Increased card size */
+  background-color: #1e1e1e; /* Dark background for the cards */
+  color: #ffffff; /* Text color inside cards */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.highlighted {
+  border: 2px solid #00bfff; /* Blue border for the highlighted plan */
+  background-color: #2c3e50; /* Slightly brighter background for the highlighted plan */
+}
+
+.plan-card h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #00bfff; /* Blue color for plan name */
+}
+
+.plan-card .price {
+  font-size: 2.5em;
+  color: #ffcc00; /* Gold color for price */
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.features-list li {
+  margin: 10px 0;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+
+.features-list li:before {
+  content: "✔";
+  color: #00ff00; /* Green checkmark for features */
+  margin-right: 10px;
+}
+
+/* Button styles */
+.subscription-page button {
+  background-color: #00bfff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.subscription-page button:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+/* Footer styles */
+.subscription-footer {
+  margin-top: 60px;
+  font-size: 1em;
+}
+
+.subscription-footer a {
+  color: #00bfff;
+  text-decoration: underline;
+}
+
+.subscription-footer a:hover {
+  color: #007acc;
+}
+.language-switcher {
+  margin-top: 20px;
+  text-align: center;
+}
+.language-switcher button {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+}
+.language-switcher button:hover {
+  background-color: #0056b3;
+}

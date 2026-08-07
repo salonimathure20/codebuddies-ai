@@ -1,0 +1,90 @@
+.payment-form form > * {
+  margin: 10px 0;
+}
+
+.payment-form button {
+  background-color: #20d450;
+}
+
+.payment-form button {
+  background: #20d450;
+  border-radius: 3px;
+  color: white;
+  border: 0;
+  padding: 12px 16px;
+  margin-top: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+}
+.payment-form button:hover {
+  filter: contrast(115%);
+}
+.payment-form button:active {
+  transform: translateY(0px) scale(0.98);
+  filter: brightness(0.9);
+}
+.payment-form button:disabled {
+  opacity: 0.5;
+  cursor: none;
+}
+
+.payment-form input,
+select {
+  display: block;
+  font-size: 1.1em;
+  width: 100%;
+}
+
+.payment-form label {
+  display: block;
+}
+
+.payment-form a {
+  color: #635bff;
+  font-weight: 900;
+}
+
+.payment-form small {
+  font-size: 0.6em;
+}
+
+.payment-form fieldset,
+input,
+select {
+  border: 1px solid #efefef;
+}
+
+#payment-form {
+  border: #f6f9fc solid 1px;
+  border-radius: 3px;
+  padding: 20px;
+  margin: 20px 0;
+  width: 50%;
+  height: auto;
+  box-shadow: 0 30px 50px -20px rgb(50 50 93 / 25%),
+    0 30px 60px -30px rgb(0 0 0 / 30%);
+}
+
+#messages {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New";
+  display: none;
+  background-color: #dae2ea;
+  color: #00d924;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 3px;
+  font-size: 0.7em;
+}
+
+/* General styles for the form container */
+.checkout-form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}

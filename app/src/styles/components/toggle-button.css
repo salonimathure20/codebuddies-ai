@@ -1,0 +1,32 @@
+/* Switch container */
+.switch {
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #555; /* Default off-state color */
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 3px;
+  transition: background-color 0.3s ease;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+/* On state */
+.switch-on {
+  background-color: #007bff; /* On-state color */
+}
+
+/* Indicator */
+.switch-indicator {
+  width: 24px;
+  height: 24px;
+  background-color: #dcdcdc; /* Indicator color */
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Move indicator for on state */
+.switch-on .switch-indicator {
+  transform: translateX(30px); /* Adjust based on container width */
+}

@@ -1,0 +1,168 @@
+/* Main container for the profile page */
+.profile-form-main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align elements to the top */
+    align-items: center;
+    font-family: "Roboto", sans-serif; /* Add a modern font */
+    padding: 40px;
+    overflow-y: auto; /* Allow scrolling if the content exceeds the screen */
+  }
+  
+  /* Add some space between the header and "Create Your Profile" */
+  .profile-form-main .profile-form-text {
+    margin-top: 40px;
+    margin-bottom: 20px; /* Space between the text and the profile picture upload */
+    text-align: center;
+  }
+  
+  /* Form container */
+  .profile-form-main .dynamic-form {
+    width: 100%;
+    max-width: 480px; /* Max width to make the form responsive */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Soft shadow for the card */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Title of the form */
+  .profile-form-main .form-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Style for the form fields */
+  .profile-form-main .form-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Input fields styling */
+  .profile-form-main input[type="text"],
+  .profile-form-main textarea {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .profile-form-main input[type="text"]:focus,
+  .profile-form-main textarea:focus {
+    border-color: var(--primaryOrange);
+    box-shadow: 0px 0px 8px rgba(255, 105, 0, 0.5); /* Focus effect */
+  }
+  
+  /* Profile picture styling */
+  .profile-form-main .profile-picture-upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* Space between the profile picture and form */
+  }
+  
+  .profile-form-main .profile-picture-upload-container input[type="file"] {
+    display: none; /* Hide the default file input */
+  }
+  
+  .profile-form-main .profile-picture-upload-container .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Make the avatar clickable */
+  }
+  
+  .profile-form-main .profile-picture-upload-container .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .profile-form-main .profile-picture-upload-container .default-avatar {
+    font-size: 2rem;
+    color: #007bff;
+    background-color: #f0f0f0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Error text styling */
+  .profile-form-main .error-text {
+    color: red;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Submit button styling */
+  .profile-form-main .submit-btn {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #ff6f00; /* A modern orange color */
+    color: white;
+    border: none;
+    border-radius: 30px; /* Rounded button */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: center;
+  }
+  
+  .profile-form-main .submit-btn:hover {
+    background-color: #ff8c00; /* Slightly darker on hover */
+    transform: translateY(-3px); /* Subtle hover lift effect */
+  }
+  
+  .profile-form-main .submit-btn:active {
+    transform: translateY(1px); /* Button pressed effect */
+  }
+  
+  /* Additional responsiveness for smaller screens */
+  @media (max-width: 768px) {
+    .profile-form-main .dynamic-form {
+      width: 90%;
+    }
+  
+    .profile-form-main .form-title {
+      font-size: 1.8rem;
+    }
+  
+    .profile-form-main input[type="text"],
+    .profile-form-main textarea {
+      font-size: 0.9rem;
+    }
+  
+    .profile-form-main .file-upload-label {
+      font-size: 0.9rem;
+    }
+  
+    .profile-form-main .profile-picture-upload input[type="file"] + label {
+      padding: 8px 16px; /* Smaller padding on mobile */
+    }
+  
+    .profile-form-main .submit-btn {
+      font-size: 1rem;
+      padding: 10px 16px;
+    }
+  }
+  

@@ -1,0 +1,33 @@
+
+{
+    "welcome_message": "Welcome to the Subscription Page",
+    "choose_plan": "Choose Your Subscription Plan",
+    "pick_best_plan": "Pick the plan that best fits your needs and unlock powerful features.",
+    "free_plan": "Free Plan",
+    "premium_plan": "Premium Plan",
+    "team_plan": "Team Plan",
+    "free_plan_features": [
+      "Basic pair programming features",
+      "Shared code editor",
+      "1-hour session limit",
+      "Community support"
+    ],
+    "premium_plan_features": [
+      "Everything in Free Plan",
+      "Unlimited session duration",
+      "Session recording and playback",
+      "Priority customer support",
+      "Advanced analytics"
+    ],
+    "team_plan_features": [
+      "Everything in Premium Plan",
+      "Multi-user support",
+      "Role-based access control",
+      "Custom branding",
+      "Team performance analytics"
+    ],
+    "get_started": "Get Started",
+    "choose_plan_button": "Choose Plan",
+    "contact_team": "Not sure which plan to choose? Contact our team for assistance."
+  }
+  

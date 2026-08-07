@@ -1,0 +1,135 @@
+.session-container {
+  display: flex;
+  flex-direction: column;
+  height: calc(100% - 70px);
+  position: relative;
+  top: 70px;
+  width: calc(100% - 70px);
+  left: 70px;
+  color: #fff;
+}
+
+.main-section {
+  display: flex;
+  flex: 1;
+  height: 90%;
+}
+
+.code-editor-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-right: 2px solid #393e46;
+}
+.editor-run {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.editor-toolbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  gap: 15px;
+  border-bottom: 2px solid #393e46;
+}
+
+.language-select {
+  padding: 0.5rem;
+  background-color: #222831;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.run-button {
+  padding: 0.5rem 1rem;
+  background-color: #399bc4;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.run-button:hover {
+  background-color: #007b7e;
+}
+
+.camera-section {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.camera-window {
+  width: 90%;
+  height: 45%;
+  margin: 0.5rem 0;
+  border: 2px solid #393e46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.camera-placeholder {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.remaining-time {
+  color: #00adb5;
+  margin-top: 1rem;
+}
+
+.output-container {
+  background-color: #222831;
+  border-top: 2px solid #393e46;
+  height: 100%;
+  width: 50%;
+  overflow-y: auto;
+}
+
+.output-container pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.button-bar {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  height: 10%;
+  border-top: 2px solid #393e46;
+}
+
+.circle-button {
+  width: 50px;
+  height: 50px;
+  margin: 0 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.blue-button {
+  background-color: #399bc4;
+}
+
+.yellow-button {
+  background-color: #d98020;
+}
+
+.red-button {
+  background-color: #d6545a;
+}
+
+.green-button {
+  background-color: #d9d9d9;
+}

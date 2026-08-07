@@ -1,0 +1,71 @@
+openapi: 3.1.0
+info:
+  title: CodeBuddies API specs for sign up
+  description: API for user registration.
+  version: 1.0.0
+servers:
+  - url: "http://localhost:3000"
+    description: Local development environment
+paths:
+  /signup:
+    post:
+      summary: User sign-up
+      description: Registers a new user with name, email, password, and userType.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                password:
+                  type: string
+                userType:
+                  type: string
+            examples:
+              example1:
+                value:
+                  name: "John Doe"
+                  email: "johndoe@example.com"
+                  password: "password123"
+                  userType: "individual"
+      responses:
+        "201":
+          description: User created successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  token:
+                    type: string
+              examples:
+                example1:
+                  value:
+                    status: 201
+                    message: "SignUp Successful"
+                    token: "jwt.token.here"
+        "400":
+          description: Bad Request - User already exists
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              examples:
+                example1:
+                  value:
+                    status: 400
+                    message: "User already exists!"

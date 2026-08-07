@@ -1,0 +1,43 @@
+.dashboard-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.dashboard-content {
+  width: calc(75% - 70px);
+  height: auto;
+  position: relative;
+  left: 70px;
+  top: 70px;
+  padding: 20px;
+}
+
+#add-user_element {
+  top: 100px;
+  left: 100px;
+}
+
+.modal-container .dynamic-form {
+  width: 80%;
+}
+.modal-container .form-field {
+  width: 80%;
+}
+.modal-container .textfield-container {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.modal-container .textfield-input {
+  width: 100%;
+}
+
+.modal-container .dynamic-form p {
+  margin: revert;
+}
+
+.dashboard-main .modal-overlay {
+  background-color: rgba(146, 141, 141, 0.5);
+}

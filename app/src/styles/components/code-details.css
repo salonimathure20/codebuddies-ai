@@ -1,0 +1,100 @@
+/* Card container */
+.buddy-card {
+  width: 400px;
+  padding: 20px;
+  background-color: #1e1e2f;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Header styles */
+.buddy-card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.buddy-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2a2a42;
+}
+
+.buddy-info {
+  flex: 1;
+}
+
+.buddy-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-dot.online {
+  background-color: #00ff00;
+}
+
+.status-dot.offline {
+  background-color: #ff0000;
+}
+
+.buddy-role {
+  font-size: 0.9rem;
+  color: #cccccc;
+  margin: 0;
+}
+
+/* Body styles */
+.buddy-card-body {
+  text-align: left;
+}
+
+.buddy-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.buddy-skills,
+.buddy-time {
+  font-size: 0.85rem;
+  margin: 5px 0;
+}
+
+.buddy-message {
+  font-size: 0.85rem;
+  margin: 10px 0 5px;
+}
+
+.buddy-message-box {
+  padding: 10px;
+  background-color: #2a2a42;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.buddy-message-box:focus-within {
+  outline: 2px solid #ff7b54;
+}
+
+textarea {
+  width: 90%;
+  border: 0;
+}

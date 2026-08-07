@@ -1,0 +1,65 @@
+/* Container styles */
+.session-screen {
+  width: calc(100% - 100px);
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Avatars section */
+.avatars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffffff;
+}
+
+/* Dotted line */
+.dotted-line {
+  flex: 1;
+  height: 1px;
+  border-top: 1px dashed #ffffff;
+  margin: 0 20px;
+}
+
+/* Confirmation message */
+.confirmation-message {
+  margin: 20px 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #dddddd;
+}
+
+/* Button styles */
+.start-session-button {
+  background: linear-gradient(90deg, #ff7b54, #ff6e91);
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-session-button:hover {
+  background: linear-gradient(90deg, #ff6e91, #ff7b54);
+  transform: scale(1.05);
+}

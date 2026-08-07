@@ -1,0 +1,39 @@
+.textfield-container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+
+  color: #c0c0c0; /* Light gray for label text */
+}
+
+.textfield-label {
+  font-size: 16px;
+}
+
+.textfield-input {
+  background-color: #0b0b1e; /* Dark background */
+  color: #c0c0c0; /* Light gray text color */
+  border: 1px solid #3c3c54; /* Gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.textfield-input:focus {
+  border-color: #f8a90a; /* Orange border on focus */
+  color: #ffffff; /* White text on focus */
+}
+.textfield-container .icon {
+  transform: translate(0%, -40px);
+  align-self: end;
+  margin-right: 10px;
+}
+
+.visibility-div {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}

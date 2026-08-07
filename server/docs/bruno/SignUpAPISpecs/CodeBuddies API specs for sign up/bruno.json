@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "CodeBuddies API specs for sign up",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

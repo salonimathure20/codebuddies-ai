@@ -1,0 +1,31 @@
+.navbar-main {
+  width: 70px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 0.2px solid rgba(255, 255, 255, 0.15);
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.upper-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.upper-icons .avatar-main img {
+  margin-top: 40px;
+}
+
+.upper-icons svg {
+  margin-top: 80px;
+}
+
+.logout-div {
+  padding: 20px;
+}

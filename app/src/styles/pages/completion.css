@@ -1,0 +1,130 @@
+.receipt-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1f2833, #0b0c10);
+  color: #fff;
+  padding: 30px;
+  font-family: "Arial", sans-serif;
+}
+
+/* Receipt Card */
+.receipt-card {
+  background: #2c2f33;
+  padding: 40px 60px;
+  border-radius: 20px;
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.6);
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.receipt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Header Section */
+.receipt-header {
+  margin-bottom: 30px;
+  border-bottom: 2px solid #50555b;
+  padding-bottom: 20px;
+}
+
+.success-icon {
+  background-color: #4caf50;
+  color: #fff;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  display: inline-block;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.receipt-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Details Section */
+.receipt-details {
+  text-align: left;
+  margin-top: 30px;
+  font-size: 18px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #50555b;
+  transition: color 0.2s ease;
+}
+
+.detail-item:hover {
+  color: #e0e0e0;
+}
+
+.detail-item.total {
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: none;
+  margin-top: 15px;
+}
+
+/* Download and Share Buttons */
+.download-share {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.download-btn,
+.share-btn {
+  flex: 1;
+  padding: 15px 25px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover,
+.share-btn:hover {
+  background-color: #3e8e41;
+  transform: translateY(-3px);
+}
+
+.download-btn:active,
+.share-btn:active {
+  background-color: #369636;
+  transform: translateY(0px);
+}
+
+/* Animation for subtle entry effect */
+.receipt-card {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+body {
+  margin: 0;
+  font-family: "Onest", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #030315;
+  color: var(--primaryWhite);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+:root {
+  --primaryWhite: rgba(255, 255, 255, 0.86);
+  --primaryOrange: #ffa629;
+}
+
+.icon:hover {
+  cursor: pointer;
+}

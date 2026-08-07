@@ -1,0 +1,16 @@
+.session-requests-screen {
+  width: calc(100% - 100px);
+  height: calc(100% - 70px);
+  /* margin: 0 auto; */
+  text-align: center;
+  padding: 30px;
+  border-radius: 15px;
+
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 70px;
+  margin-top: 70px;
+}

@@ -1,0 +1,65 @@
+openapi: 3.1.0
+info:
+  title: CodeBuddies API specs for login
+  description: API for user authentication.
+  version: 1.0.0
+servers:
+  - url: "http://localhost:3000"
+    description: Local development environment
+paths:
+  /login:
+    post:
+      summary: User login
+      description: Authenticates a user and returns a JWT token.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+            examples:
+              example1:
+                value:
+                  email: "johndoe@example.com"
+                  password: "password123"
+      responses:
+        "200":
+          description: SignIn Successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+                  token:
+                    type: string
+              examples:
+                example1:
+                  value:
+                    status: 200
+                    message: "SignIn Successful"
+                    token: "jwt.token.here"
+        "404":
+          description: Invalid Credentials
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              examples:
+                example1:
+                  value:
+                    status: 404
+                    message: "Invalid Credentials"

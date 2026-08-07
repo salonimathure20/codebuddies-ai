@@ -1,0 +1,67 @@
+.live-coder-main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.live-coder-content {
+  width: calc(75% - 70px);
+  height: auto;
+  position: relative;
+  left: 70px;
+  top: 70px;
+  overflow-y: scroll;
+}
+.live-code-left-panel {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px;
+}
+.textfield-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  color: #c0c0c0; /* Light gray for label text */
+}
+
+.textfield-label {
+  font-size: 16px;
+}
+
+.textfield-select {
+  background-color: #0b0b1e; /* Dark background */
+  color: #c0c0c0; /* Light gray text color */
+  border: 1px solid #3c3c54; /* Gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px;
+  font-size: 16px;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.textfield-select:focus {
+  border-color: #f8a90a; /* Orange border on focus */
+  color: #ffffff; /* White text on focus */
+}
+
+.menu-item {
+  background-color: #0b0b1e;
+  color: #c0c0c0;
+}
+
+.menu-item:hover {
+  background-color: #3c3c54; /* Slightly lighter on hover */
+}
+
+.dropdown-div {
+  width: 100%;
+  color: var(--primaryWhite);
+}

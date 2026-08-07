@@ -1,0 +1,55 @@
+openapi: 3.0.1
+info:
+  title: CodeBuddies User API Specs
+  description: API for user deletion.
+  version: 1.0.0
+servers:
+  - url: "http://localhost:3000"
+    description: Local development environment  
+paths:
+  /{id}:
+    delete:
+      summary: Delete user
+      description: Deletes a user by their unique ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          examples:
+            example1:
+              value: "60d...abcdef123456"
+      responses:
+        "200":
+          description: User deleted successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              examples:
+                example1:
+                  value:
+                    status: 200
+                    message: "User deleted"
+        "400":
+          description: User not deleted
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: integer
+                  message:
+                    type: string
+              examples:
+                example1:
+                  value:
+                    status: 400
+                    message: "User not deleted"

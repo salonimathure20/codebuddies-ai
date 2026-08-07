@@ -1,0 +1,32 @@
+{
+    "welcome_message": "Bienvenido a la página de suscripción",
+    "choose_plan": "Elige tu plan de suscripción",
+    "pick_best_plan": "Elija el plan que mejor se adapte a sus necesidades y desbloquee funciones poderosas.",
+    "free_plan": "Plan gratuito",
+    "premium_plan": "Plan premium",
+    "team_plan": "Plan de equipo",
+    "free_plan_features": [
+      "Funciones básicas de programación en pareja",
+      "Editor de código compartido",
+      "Límite de sesión de 1 hora",
+      "Soporte de la comunidad"
+    ],
+    "premium_plan_features": [
+      "Todo en el Plan Gratuito",
+      "Duración ilimitada de la sesión",
+      "Grabación y reproducción de sesiones",
+      "Soporte prioritario al cliente",
+      "Analítica avanzada"
+    ],
+    "team_plan_features": [
+      "Todo en el Plan Premium",
+      "Soporte multiusuario",
+      "Control de acceso basado en roles",
+      "Branding personalizado",
+      "Analítica de rendimiento del equipo"
+    ],
+    "get_started": "Comenzar",
+    "choose_plan_button": "Elige el plan",
+    "contact_team": "¿No estás seguro de qué plan elegir? Ponte en contacto con nuestro equipo para obtener ayuda."
+  }
+  

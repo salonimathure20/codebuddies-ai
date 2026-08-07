@@ -1,0 +1,44 @@
+.live-users-panel-main {
+  top: 70px;
+  width: 25%;
+  border-left: 0.2px solid rgba(255, 255, 255, 0.15);
+  height: calc(100vh - 70px);
+  position: fixed;
+  right: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}
+
+.proctor-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.status-indicator-panel {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #00ff00; /* Green indicator */
+  border: 2px solid #1e1e2f;
+  border-radius: 50%;
+  transform: translate(16px, 10px);
+}
+
+.live-users-panel-main p {
+  margin-left: 15px;
+}
+
+.live-user-left {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.visibility-div:hover {
+  cursor: pointer;
+}

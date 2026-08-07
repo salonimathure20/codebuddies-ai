@@ -1,0 +1,55 @@
+.tabs-container {
+  max-width: 100%;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: flex-start;
+  max-width: 20%;
+}
+
+.tab-button {
+  flex: 1;
+  padding: 15px 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #c0c0c0; /* Light gray for inactive tabs */
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.tab-button.active {
+  color: #f8a90a; /* Orange for active tab */
+  font-weight: bold;
+}
+
+.tab-button.active::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 45px;
+  background-color: #f8a90a; /* Orange underline */
+  margin: 0 auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.tabs-content {
+  padding: 20px;
+  color: #fff; /* White text for content */
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(400px, 1fr)
+  ); /* Responsive columns */
+  grid-auto-rows: auto; /* Automatically adjust row height */
+  gap: 16px; /* Add space between items */
+}
+
+.tab-button:hover {
+  background: transparent;
+}
