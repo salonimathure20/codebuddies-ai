@@ -1,7 +1,7 @@
 import axios from "axios";
 import { IProfile } from "src/models/profiles";
 
-const API_BASE_URL = "http://localhost:3001/api"; // Replace with your API base URL
+const API_BASE_URL = import.meta.env.VITE_API_URL; // Replace with your API base URL
 
 export const fetchUserProfile = async (id: string) => {
   try {
@@ -44,7 +44,7 @@ export const updateProfile = async (
     techSkills?: string[];
     previousExperience?: string;
     profilePicture?: string;
-  }
+  },
 ) => {
   return await axios.put(`${API_BASE_URL}/profiles/${profileId}`, updates);
 };
@@ -52,6 +52,6 @@ export const updateProfile = async (
 // Delete a profile picture
 export const deleteProfilePicture = async (profileId: string) => {
   return await axios.patch(
-    `${API_BASE_URL}/profiles/${profileId}/remove-picture`
+    `${API_BASE_URL}/profiles/${profileId}/remove-picture`,
   );
 };

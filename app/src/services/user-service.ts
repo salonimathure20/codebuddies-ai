@@ -3,7 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import { DecodedToken } from "src/models/decoded-token";
 import { IUser } from "src/models/user";
 
-const API_BASE_URL = "http://localhost:3001/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export const signUp = async (userData: {
   name: string;
@@ -36,7 +36,7 @@ export const resetPassword = async (
   userId: string,
   userData: {
     newPassword: string;
-  }
+  },
 ) => {
   const response = await axios.put(`${API_BASE_URL}/user/${userId}`, userData);
   return response.data;

@@ -68,7 +68,7 @@ const SessionScreen: React.FC = () => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
     return `${String(minutes).padStart(2, "0")}:${String(
-      remainingSeconds
+      remainingSeconds,
     ).padStart(2, "0")}`;
   };
 
@@ -83,7 +83,7 @@ const SessionScreen: React.FC = () => {
 
   const ws = useRef<WebSocket | null>(null);
   const [mediaRecorder, setMediaRecorder] = useState<MediaRecorder | null>(
-    null
+    null,
   );
   const [recordedChunks, setRecordedChunks] = useState<Blob[]>([]);
   const [isRecording, setIsRecording] = useState(false);
@@ -98,7 +98,7 @@ const SessionScreen: React.FC = () => {
     try {
       // Get the file extension based on the selected language
       const selectedLanguage = languageOptions.find(
-        (opt) => opt.label === language
+        (opt) => opt.label === language,
       );
       const fileExtension = selectedLanguage?.fileExtension || "txt";
 
@@ -178,12 +178,15 @@ const SessionScreen: React.FC = () => {
         const videoBlob = new Blob(recordedChunks, { type: "video/mp4" });
 
         // Call your pre-signed URL API
-        const response = await axios.post("http://localhost:3001/api/s3", {
-          userId: user?.id,
-          sessionId: sessionId,
-          filename: `screen-recording.mp4`,
-          contentType: "video/mp4",
-        });
+        const response = await axios.post(
+          `${import.meta.env.VITE_API_URL}/s3`,
+          {
+            userId: user?.id,
+            sessionId: sessionId,
+            filename: `screen-recording.mp4`,
+            contentType: "video/mp4",
+          },
+        );
 
         const presignedUrl = response.data.result.signedUrl;
 
@@ -326,7 +329,7 @@ const SessionScreen: React.FC = () => {
 
   const gotRemoteStream = (event: RTCTrackEvent) => {
     const remotePlayer = document.getElementById(
-      "peerPlayer"
+      "peerPlayer",
     ) as HTMLVideoElement;
     if (remotePlayer) remotePlayer.srcObject = event.streams[0];
   };
@@ -347,7 +350,7 @@ const SessionScreen: React.FC = () => {
       .getUserMedia({ audio: true, video: true })
       .then((stream) => {
         const localPlayer = document.getElementById(
-          "localPlayer"
+          "localPlayer",
         ) as HTMLVideoElement;
         if (localPlayer) localPlayer.srcObject = stream;
         localStream = stream;
@@ -358,7 +361,7 @@ const SessionScreen: React.FC = () => {
               channelName: getQueryParam("channelName"),
               userName: getQueryParam("userName"),
             },
-          })
+          }),
         );
         setupPeerConnection();
       })
@@ -380,7 +383,7 @@ const SessionScreen: React.FC = () => {
 
   const executeCode = async () => {
     const selectedLanguage = languageOptions.find(
-      (opt) => opt.label === language
+      (opt) => opt.label === language,
     );
     if (!selectedLanguage) return;
 
@@ -409,7 +412,7 @@ const SessionScreen: React.FC = () => {
           headers: {
             "Content-Type": "application/json",
           },
-        }
+        },
       );
 
       const result = response.data;
@@ -433,7 +436,7 @@ const SessionScreen: React.FC = () => {
             userName: getQueryParam("userName"),
             code: newCode,
           },
-        })
+        }),
       );
     }
   };

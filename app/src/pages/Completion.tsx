@@ -5,7 +5,6 @@ import axios from "axios";
 import "styles/pages/completion.css"; // Create this CSS file for styling the receipt
 import { jsPDF } from "jspdf";
 
-
 const Completion = () => {
   const location = useLocation();
   const { user } = useAuth();
@@ -93,13 +92,13 @@ const Completion = () => {
       const savePaymentDetails = async () => {
         try {
           const response = await axios.post(
-            "http://localhost:3001/api/payments/save-payment-details",
+            `${import.meta.env.VITE_API_URL}/payments/save-payment-details`,
             {
               username,
               planName,
               price,
               paymentStatus: "succeeded",
-            }
+            },
           );
 
           console.log("Payment details saved successfully:", response.data);
@@ -112,7 +111,7 @@ const Completion = () => {
     } else {
       console.error(
         "Payment failed or incomplete. Redirect status:",
-        redirectStatus
+        redirectStatus,
       );
     }
   }, [location, user]);
@@ -126,7 +125,9 @@ const Completion = () => {
         </div>
         <div className="receipt-details">
           <div className="download-share">
-            <button className="download-btn" onClick={saveInvoiceToPDF}>Download Invoice</button>
+            <button className="download-btn" onClick={saveInvoiceToPDF}>
+              Download Invoice
+            </button>
             <button className="share-btn">Share Invoice</button>
           </div>
           <div className="detail-item">

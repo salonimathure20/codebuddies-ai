@@ -1,10 +1,10 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:3001/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 
 export const uploadProfilePictureToS3 = async (
   userId: string,
-  file: File
+  file: File,
 ): Promise<{ imgUrl: string }> => {
   try {
     // Step 1: Create a FormData object and append the file and metadata
@@ -21,7 +21,7 @@ export const uploadProfilePictureToS3 = async (
         headers: {
           "Content-Type": "multipart/form-data", // Required for file uploads
         },
-      }
+      },
     );
 
     const { signedUrl, imgUrl } = response.data.result;

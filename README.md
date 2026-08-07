@@ -1,5 +1,3 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/DIHvCS29)
-
 # CodeBuddies - A Pair Programming Platform
 
 CodeBuddies is a collaborative platform designed to facilitate pair programming sessions. The application allows users to connect in real-time, with features for video/audio calls, a shared code editor, and session recording, making it ideal for remote development, mentoring, and onboarding processes.
